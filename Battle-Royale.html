@@ -11,59 +11,134 @@
     <div class="nav">
       <div><a href="index.html#featured-projects">Featured Projects</a></div>
       <div><a href="index.html#other-projects">Other Projects</a></div>
-      <div><a href="Resume_Rasmussen_23-9-7.pdf">Resume</a></div>
+      <div><a href="Resume_Rasmussen.pdf">Resume</a></div>
     </div>
     <div class="project">
         <h1 class="project-title">D&D Battle Royale</h1>
         <p class="p-narrow">
-          Dungeons and Dragons: Battle Royale is a module I created by adapting the D&D 5th edition ruleset. 
-          This project presented several project-threatening challenges, including tracking the positions of all 8 teams across multiple game sessions without being slowed down by unnecessary detail. 
-          <br><br>I solved this problem by splitting the arena into blocks. 
-          Only teams in the same block are able to fight each other, so the Dungeon Master can simply track which teams are in which blocks. 
-          This had the added benefit of inspiring an arena-wide puzzle which incentivized players to engage in more exploratory and tactical aspects of the game. 
+          <i>Dungeons and Dragons: Battle Royale</i> is a module I created by adapting the D&D 5th edition ruleset into a more controlled and designed experimental game. 
+          In making <i>D&D: Battle Royale</i>, I encountered several project-threatening challenges, including tracking the positions of all 8 teams across multiple game sessions without being slowed down by unnecessary detail. 
+          <br><br>I solved this problem by splitting the arena into zones of descending size. 
+          Only teams in the same zone are able to fight each other, so the Dungeon Master only needs to add detail to the tracking of team positions when one or more teams share a zone. 
+          This had the added benefit of inspiring an arena-wide puzzle. 
         </p>
         <div class="project-blurb">
+          <img src="images/DnDBattleRoyale/Teleporter.png">
             <p>
               The puzzle takes the form of 22 teleporters scattered throughout the arena which can be linked to travel between zones. 
-              Each teleporter is placed on a 2D plane, but can only take 1 number as input, meaning the players must understand the recursive coordinate system underlying the entire arena. 
+              Each teleporter is placed on a 2D plane, but can only take a single 5-digit number as input. To use the teleporters, the players must understand the recursive coordinate system underlying the entire arena. 
             </p>
-            <img src="images/DnDBattleRoyale/Teleporter.png">
+            
         </div>
         <div class="project-blurb">
-          <p>
-            This recursive coordinate system works by subdividing the arena into 3x3 sets of zones with decreasing size. 
-            First, the entire arena is split into 9 blocks labeled 1 through 9. 
-          </p>
           <img src="images/DnDBattleRoyale/3x3.png">
+          <p>
+            This recursive coordinate system works by subdividing the arena into 3x3 sets of zones of decreasing size. 
+            First, the entire arena is split into 9 zones labeled 1 through 9. 
+          </p>
+          
       </div>
       <div class="project-blurb">
+        <img src="images/DnDBattleRoyale/9x9.png">
         <p>
           These 9 zones can then be subdivided into 9 more zones each, giving us 81 total spaces. 
           Notice that these new spaces are given a unique coordinate based on where they are at each level of subdivision. 
         </p>
-        <img src="images/DnDBattleRoyale/9x9.png">
+        
       </div>
       <div class="project-blurb">
+        <img src="images/DnDBattleRoyale/19.png">
         <p>
           The coordinates are not arbitrary; they serve as instructions to find the space to which they refer. 
           For example, the coordinate 19 instructs us to enter the first zone at the highest level of subdivision, then the ninth zone within the next layer of subdivision. 
-          Just 5 levels of subdivision gives us an arena of 243x243, or 59,049 spaces that can be found using a 5 digit coordinate. 
+          Just 5 levels of subdivision gives us an arena of 243x243, or 59,049 unique spaces that can be found using a 5-digit coordinate. 
         </p>
-        <img src="images/DnDBattleRoyale/19.png">
+        
       </div>
       <div class="project-blurb">
+        <img src="images/DnDBattleRoyale/Teams.png">
         <p class="p-narrow">
           Note that this coordinate system solves the original problem (efficiently tracking teams' positions) particularly well. 
-          If a team does not share a first-layer zone with any other teams, then their position can be tracked with a single digit 1-9. 
-          If two or more teams share a first-layer zone, additional digits can easily be added to their positions to clarify where they are more precisely. 
+          If a team does not share a first-order zone with any other teams, then their position can be tracked with a single digit 1-9. 
+          If two or more teams share a first-order zone, additional digits can be added to their positions to clarify where they are more precisely. 
         </p>
-        <img src="images/DnDBattleRoyale/Teams.png">
+        
       </div>
+      <div class="project-blurb">
+        <img src="images/DnDBattleRoyale/arena_map.png">
+        <p class="p-narrow">
+          The party is given a scale-accurate map of the entire arena. 
+          This map reveals the location of all 22 teleporters in the arena. 
+        </p>
+      </div>
+      <div class="project-blurb">
+        <img src="images/DnDBattleRoyale/arena_map_close_up.png">
+        <p class="p-narrow">
+          The map is also accurate down to the individual in-game 5x5 tile.
+          Players are able to fully inspect it at-will with the aid of the Foundry virtual tabletop. 
+        </p>
+      </div>
+      <p class="p-narrow">
+        Players can link teleporters by inputting the 5-digit coordinate of one teleporter into another. 
+        Because these teleporters are the main method of moving through the arena, it was vital that players have multiple ways they could arrive at the same conclusion. 
+      </p>
+      <div class="project-blurb">
+        <img src="images/DnDBattleRoyale/Recursive_Chess.png">
+        <p class="p-narrow">
+          The intended solution is by interacting with a minigame called Resursive Chess. 
+          This is a miniaturized version of the larger puzzle. Players have a 2-digit input and take control of a chess piece that moves based on the recursive coordinate system.  
+          I included Recursive Chess to give players a tangible way to test their theories about the larger puzzle. 
+        </p>
+      </div>
+      <p class="p-narrow">Players who struggle with Recursive Chess still have several clues that can help put them on the right track.</p>
+      <div class="project-blurb">
+        <img src="images/DnDBattleRoyale/higher-order_zones.png">
+        <p class="p-narrow">
+          Each first-order zone is designed to physically resemble the number it corresponds to in the coordinate system.
+        </p>
+      </div>
+      <div class="project-blurb">
+        <img src="images/DnDBattleRoyale/scribblings.png">
+        <p class="p-narrow">
+          Each zone also features a haunted house section in which scribblings depict the coordinate system. 
+          These scribblings, too, are accurate down to the individual 5x5 space. 
+        </p>
+      </div>
+      <p class="p-narrow">
+          If players are <i>really</i> struggling, I included 2 hail-mary giveaways to let them partially bypass the puzzle. 
+      </p>
+      <div class="project-blurb">
+        <img src="images/DnDBattleRoyale/hedge_maze.png">
+        <p class="p-narrow">
+          The first and more obvious hail-mary is a "hedge maze" included in each first-order zone. 
+          These hedge mazes spell out the coordinates that will take them clockwise around the outer edge of the arena. 
+        </p>
+      </div>
+      <div class="project-blurb">
+        <img src="images/DnDBattleRoyale/brute_sheet.png">
+        <p class="p-narrow">
+          The less obvious hail-mary is in the haunted house. 
+          Here, players can find a sheet of paper left behind by an NPC who has manually tried several dozen combinations.
+          <br><br>Perceptive players - or those who pass a Perception Check - will notice that one of these codes is not crossed out.
+          By inputting the codes available on these sheets, players can travel counter-clockwise around the arena without solving the puzzle. 
+        </p>
+      </div>
+      <p class="p-narrow">
+        These hail-mary solutions don't give players access to the full arena; they're meant to curb frustration and provide actionable clues towards the full solution. 
+        There are large areas of the arena that are entirely inaccessible until players can derive the coordinates of the relevant teleporters on their own.
+      </p>
+      <p class="p-narrow">
+        This is by far the largest puzzle I've ever designed for a game project, and I'm extremely happy with how it came together. 
+        Developing <i>D&D: Battle Royale</i> taught me several valuable lessons in game- and puzzle-design, including:
+        <br><br>1. Puzzles can be designed to teach game mechanics rather than conceal solutions
+        <br><br>2. Puzzles with multiple paths towards a solution will be accessible to a broader range of players
+        <br><br>3. Distributing information across several smaller reveals keeps the puzzle from becoming overwhelming. Players are given a chance to form theories on incomplete information and then test those theories against new information
+      </p>
     </div>
     <div class="nav-bottom">
       <div><a href="index.html#featured-projects">Featured Projects</a></div>
       <div><a href="index.html#other-projects">Other Projects</a></div>
-      <div><a href="Resume_Rasmussen_23-9-7.pdf">Resume</a></div>
+      <div><a href="Resume_Rasmussen.pdf">Resume</a></div>
     </div>
   </body>
 </html>

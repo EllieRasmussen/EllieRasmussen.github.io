@@ -99,7 +99,7 @@ p{
 .p-narrow{
     width: 86%;
     margin-left: 7%;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     text-align: justify;
 }
 
@@ -116,24 +116,27 @@ p{
 
 .project-blurb{
     width: 100%;
-    height: 325px;
+    height: auto;
+    display: inline-block;
 }
 
 .project-blurb p{
-    float: left;
     font-size: 16pt;
     text-align: justify;
-    margin-left: 7%;
-    width: 30%;
-    margin-top: 0;
+    margin: 1em;
 }
 
 .project-blurb img{
-    float: right;
-    margin-right: 7%;
+    float: left;
+    margin: 1em;
     width:520px;
     height: 290px; 
     border: 2px solid #F4EDEA;
+}
+
+.p-narrow ol{
+    font-size: 16pt;
+    color: #F4EDEA;
 }
 
 .gallery{
@@ -142,8 +145,13 @@ p{
     padding: 7%;
 }
 
+.gallery a{
+    width:100%;
+}
+
 .gallery img{
-    width: 30%;
+    width: 300px;
+    height: 300px;
     border: 2px solid #F4EDEA;
 }
 
