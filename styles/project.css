@@ -171,15 +171,24 @@ p{
     .project{
         width: 90%;
     }
-    .project-blurb{
-        height: 500px
-    }
-    .project-blurb p{
-        width: 86%;
-    }
     .project-blurb img{
         float: left;
         margin-bottom: 7%;
         margin-left: 7%;
     }
 }
+
+@media (max-width: 1000px){
+    .project{
+        width: 90%;
+    }
+    .project-blurb p{
+        width: 86%;
+    }
+    .project-blurb img{
+        float: left;
+        width: 260px;
+        height: 145px;
+    }
+}
+
