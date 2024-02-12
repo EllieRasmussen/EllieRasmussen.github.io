@@ -235,7 +235,7 @@ body{
     }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1000px){
     .name-plate{
         margin-top: 20vh;
     }
@@ -259,6 +259,16 @@ body{
 
     .project h2{
         font-size: 20px;
+    }
+
+    .nav{
+        display: block;
+    }
+    
+    .nav div{
+        width: 100%;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
     }
 }
 
